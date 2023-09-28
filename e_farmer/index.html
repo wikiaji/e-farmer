@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== BOXICONS ===============-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>E-Farmer</title>
+</head>
+
+<body>
+    <!--=============== HEADER ===============-->
+    <header>
+        <div class="logo__container">
+            <h2 style="color:lightslategray; font-family:monospace">
+                E-Farmer</h2>
+        </div>
+
+        <nav class="nav__container">
+            <a href="#banner" class="nav__item nav__home">Home</a>
+            <a href="#section__our-package" class="nav__item nav__our-package">Our Package</a>
+            <a href="#section__call-us" class="nav__item nav__call-us">Call Us</a>
+        </nav>
+    </header>
+
+    <!--=============== MAIN ===============-->
+    <main>
+        <!--=============== HOME ===============-->
+        <div class="section__home">
+            <div class="title__container">
+                <div class="title" id="title">
+                    <h1>E-Farmer - The best offers in Indonesia</h1>
+                </div>
+                <div class="subtitle"><span>Everyday with best ingredients</span></div>
+            </div>
+
+            <div class="banner" id="banner"></div>
+
+            <!--=============== CONTENT ===============-->
+            <div class="content__container">
+                <!--=============== CONTENT LEFT ===============-->
+                <div class="content__left">
+                    <div class="content__left-image">
+                        <img class="image" src="assets/img/1.jpg" alt="slider image" id="image">
+                        <span class="image-tag"><i>"Apa yang kita tanam, itu yang kita tuai."</i></span>
+                    </div>
+
+                    <div class="content__left-customer">
+                        <div class="circle">
+                            <i class='bx bx-user'></i>
+                        </div>
+
+                        <div class="customer__name-container">
+                            <span class="customer__name"><b>Pak le</b></span>
+                            <span class="pekerjaan__umur"><i>Petani Teh, 38</i></span>
+                        </div>
+                    </div>
+
+                    <div class="content__left-bar"></div>
+                </div>
+
+                <div class="content__left">
+                    <div class="content__left-image">
+                        <img class="image" src="assets/img/2.jpg" alt="slider image" id="image">
+                        <span class="image-tag"><i>"Kecintaan terhadap hasil dari pertanian adalah
+                                kebanggan."</i></span>
+                    </div>
+
+                    <div class="content__left-customer">
+                        <div class="circle">
+                            <i class='bx bx-user'></i>
+                        </div>
+
+                        <div class="customer__name-container">
+                            <span class="customer__name"><b>Idun Sang Petani</b></span>
+                            <span class="pekerjaan__umur"><i>Gamer, 26</i></span>
+                        </div>
+                    </div>
+
+                    <div class="content__left-bar"></div>
+                </div>
+
+                <div class="content__left">
+                    <div class="content__left-image">
+                        <img class="image" src="assets/img/3.jpg" alt="slider image" id="image">
+                        <span class="image-tag"><i>"Pucuk adalah target paling utama."</i></span>
+                    </div>
+
+                    <div class="content__left-customer">
+                        <div class="circle">
+                            <i class='bx bx-user'></i>
+                        </div>
+
+                        <div class="customer__name-container">
+                            <span class="customer__name"><b>Bjor Kadds</b></span>
+                            <span class="pekerjaan__umur"><i>Penggiat Lingkungan, 30</i></span>
+                        </div>
+                    </div>
+
+                    <div class="content__left-bar"></div>
+                </div>
+
+                <div class="content__left">
+                    <div class="content__left-image">
+                        <img class="image" src="assets/img/4.jpg" alt="slider image" id="image">
+                        <span class="image-tag"><i>"Teknologi membuat kita dipermudah dalam semua hal."</i></span>
+                    </div>
+
+                    <div class="content__left-customer">
+                        <div class="circle">
+                            <i class='bx bx-user'></i>
+                        </div>
+
+                        <div class="customer__name-container">
+                            <span class="customer__name"><b>John Manurat</b></span>
+                            <span class="pekerjaan__umur"><i>Pemuda kreatif, 25</i></span>
+                        </div>
+                    </div>
+
+                    <div class="content__left-bar"></div>
+                </div>
+
+                <!--=============== CONTENT RIGHT ===============-->
+                <div class="content__right">
+                    <div class="form__title-container" id="form__title-container">
+                        <h3 class="form__title">Contact US</h3>
+                        <span class="form__subtitle">Hubungi kami untuk kemudahan pemasaran hasil pertanian anda</span>
+                    </div>
+
+                    <!--=============== FORM ===============-->
+                    <form name="contact-form" onsubmit="return validateForm()">
+                        <!-- ! onsubmit="return validateForm()" jangan lupa onsubmit -->
+                        <label for="your-name">Your Name:<span>*</span></label>
+                        <input type="text" name="your-name" id="your-name" placeholder="First and last name">
+                        <p id="error-name"></p>
+
+                        <label for="email">Email address:<span>*</span></label>
+                        <input type="email" name="email" id="email" placeholder="example@email.com">
+                        <p id="error-email"></p>
+
+                        <label for="interest">What are you interested in?</label>
+                        <select name="interest" id="interest">
+                            <option value="" selected>Select option</option>
+                            <option value="teh">Teh</option>
+                            <option value="kopi">Kopi</option>
+                            <option value="beras">Beras</option>
+                            <option value="buah">Buah</option>
+                            <option value="sayur">Sayur</option>
+                            <option value="bundling-set">Bundling Set</option>
+                        </select>
+                        <p id="error-interest"></p>
+
+                        <button type="submit" id="send-button"><b>SEND</b></button>
+                    </form>
+
+                    <div id="success-overlay">
+                        <div class="success-message">
+                            <p id="send-success"></p>
+
+                            <button id="close-button" class="circle" onclick="window.location.reload()">
+                                <!-- ! refresh setelah di klik -->
+                                <i class='bx bxs-x-circle'></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--=============== PRODUCT ===============-->
+            <div class="product__container">
+                <div class="product">
+                    <div class="product__info">
+                        Use this space to provide users with more information about your offer.
+                        Consider it a follow-up to your headline and explain the benefits of your service or product
+                    </div>
+
+                    <div class="product__point">
+                        <div class="circle">
+                            1
+                        </div>
+
+                        <div class="product__point-text">
+                            Your first feature, written in the form of a benefit statement.
+                        </div>
+                    </div>
+
+                    <div class="product__point">
+                        <div class="circle">
+                            2
+                        </div>
+
+                        <div class="product__point-text">
+                            Your second feature, written in the form of a benefit statement.
+                        </div>
+                    </div>
+
+                    <div class="product__point">
+                        <div class="circle">
+                            3
+                        </div>
+
+                        <div class="product__point-text">
+                            Your third feature, written in the form of a benefit statement.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product__space">
+
+                </div>
+            </div>
+        </div>
+
+
+        <!--=============== OUR PACKAGE ===============-->
+        <!-- <section class="section__package"></section> -->
+        <div class="section__our-package" id="section__our-package">
+            <div class="our__package-header">
+                <h1>Our Package</h1>
+            </div>
+
+            <div class="our__package-content-container">
+                <div class="our__package-content">
+                    <div class="package__point-container top-package">
+                        <div class="package__point">
+                            <div class="circle">
+                                <i class='bx bx-book'></i>
+                            </div>
+
+                            <div class="package__point-title">
+                                <h3>Delivery</h3>
+                            </div>
+                        </div>
+
+                        <span class="package__point-text">Pengiriman terpercaya</span>
+                    </div>
+
+                    <div class="package__point-container top-package">
+                        <div class="package__point">
+                            <div class="circle">
+                                <i class='bx bx-box'></i>
+                            </div>
+
+                            <div class="package__point-title">
+                                <h3>Packing</h3>
+                            </div>
+                        </div>
+
+                        <span class="package__point-text">Pengemasan sangat aman</span>
+                    </div>
+
+                    <div class="package__point-container top-package">
+                        <div class="package__point">
+                            <div class="circle">
+                                <i class='bx bx-check'></i>
+                            </div>
+
+                            <div class="package__point-title">
+                                <h3>Fast</h3>
+                            </div>
+                        </div>
+
+                        <span class="package__point-text">Cepat sampai</span>
+                    </div>
+                </div>
+
+                <div class="our__package-bar"></div>
+
+                <div class="our__package-content">
+                    <div class="package__point-container bottom-package">
+                        <div class="package__point">
+                            <div class="circle-2">
+                                <i class='bx bx-file'></i>
+                            </div>
+
+                            <div class="package__point-title">
+                                <h3>Quality</h3>
+                            </div>
+                        </div>
+
+                        <span class="package__point-text">Mengutamakan kualitas</span>
+                    </div>
+
+                    <div class="package__point-container bottom-package">
+                        <div class="package__point">
+                            <div class="circle-2">
+                                <i class='bx bx-user'></i>
+                            </div>
+
+                            <div class="package__point-title">
+                                <h3>Connection</h3>
+                            </div>
+                        </div>
+
+                        <span class="package__point-text">Konektivitas yang banyak</span>
+                    </div>
+
+                    <div class="package__point-container bottom-package">
+                        <div class="package__point">
+                            <div class="circle-2">
+                                <i class='bx bx-dollar'></i>
+                            </div>
+
+                            <div class="package__point-title">
+                                <h3>Price</h3>
+                            </div>
+                        </div>
+
+                        <span class="package__point-text">Harga terbaik untuk para petani</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--=============== CALL US ===============-->
+        <!-- <section class="section__call-us"></section> -->
+        <div class="section__call-us" id="section__call-us">
+            <div class="call__us-header">
+                <h1>Your Closing Argument Headline</h1>
+                <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos officiis possimus sed, deserunt
+                    sint molestiae at nam quasi nobis sequi repellendus dolore enim, est id. Repudiandae possimus autem
+                    assumenda voluptates.</span>
+            </div>
+
+            <a href="#form__title-container" class="call__us-button">
+                <button id="call-action-button"><b>CALL TO ACTION</b></button>
+            </a>
+        </div>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer">
+        <h3>E-Farmer</h3>
+        <div class="policy">
+            <a href="/" class="terms-of-service">Terms of Service</a>
+            <a href="/" class="privacy-policy">Privacy Policy</a>
+        </div>
+        <div class="copyright">
+            <span>&copy 2023 &nbsp; E-Farmer</span>
+        </div>
+    </footer>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
